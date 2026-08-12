@@ -169,10 +169,10 @@ Built as a Student Management Backend project for internship preparation.
 ## 📸 API Testing Screenshots
 
 ### GET - Get All Students
-![GET Students](screenshots/get-students.png)
+![GET Students](screenshots/get-student.png)
 
 ### POST - Create Student
-![POST Student](screenshots/post-student.png)
+![POST Student](screenshots/post-students.png)
 
 ### PUT - Update Student
 ![PUT Student](screenshots/update-student.png)
