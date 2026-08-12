@@ -166,3 +166,19 @@ The `.env` file and `node_modules` directory are excluded using `.gitignore`.
 **Bindu Shri N**
 
 Built as a Student Management Backend project for internship preparation.
+## 📸 API Testing Screenshots
+
+### GET - Get All Students
+![GET Students](screenshots/get-students.png)
+
+### POST - Create Student
+![POST Student](screenshots/post-student.png)
+
+### PUT - Update Student
+![PUT Student](screenshots/update-student.png)
+
+### DELETE - Delete Student
+![DELETE Student](screenshots/delete-student.png)
+
+### Input Validation
+![Validation](screenshots/validation.png)
