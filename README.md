@@ -1,8 +1,18 @@
-# Student Management Backend
+# Student Management Projects
+
+A collection of Student Management projects developed using **Node.js, Express.js, MySQL, HTML, CSS, and JavaScript**.
+
+This repository contains multiple projects developed as part of internship preparation and practical backend/frontend development.
+
+---
+
+## 📂 Projects
+
+### Project 1 — Student Management Backend
 
 A RESTful backend application for managing student records using **Node.js, Express.js, and MySQL**.
 
-## 🚀 Features
+#### Features
 
 * Create a new student
 * Get all students
@@ -17,7 +27,7 @@ A RESTful backend application for managing student records using **Node.js, Expr
 * Environment variable configuration
 * Proper HTTP status codes and error handling
 
-## 🛠️ Technologies Used
+#### Technologies
 
 * Node.js
 * Express.js
@@ -25,55 +35,132 @@ A RESTful backend application for managing student records using **Node.js, Expr
 * mysql2
 * express-validator
 * dotenv
-* Thunder Client / Postman
-* Git & GitHub
+* Postman / Thunder Client
 
-## 📁 Project Structure
+#### Location
 
 ```text
-Student-management/
+Project-1/
+```
+
+Project-specific documentation is available in:
+
+```text
+Project-1/README.md
+```
+
+---
+
+### Project 2 — Student Management System
+
+An enhanced Student Management System with a **RESTful backend and frontend web interface**.
+
+The project extends the student management functionality by adding **course management, dashboard, reports, settings, and a user-friendly frontend interface**.
+
+#### Features
+
+* Student management
+* Course management
+* Create, read, update, and delete operations
+* Student search
+* Course search
+* Pagination
+* Sorting
+* Input validation
+* Duplicate email handling
+* Dashboard
+* Reports
+* Settings
+* Frontend interface
+* MySQL database integration
+* RESTful API
+* Error handling
+* Environment variable configuration
+
+#### Technologies
+
+* Node.js
+* Express.js
+* MySQL
+* mysql2
+* express-validator
+* dotenv
+* HTML5
+* CSS3
+* JavaScript
+* Postman / Thunder Client
+
+#### Project Structure
+
+```text
+Project-2/
 │
 ├── config/
 │   └── db.js
 │
 ├── controllers/
 │   ├── studentController.js
-│   └── studentValidation.js
+│   ├── studentValidation.js
+│   └── courseController.js
 │
 ├── routes/
-│   └── studentRoutes.js
+│   ├── studentRoutes.js
+│   └── courseRoutes.js
 │
+├── frontend/
+│   ├── css/
+│   ├── js/
+│   ├── index.html
+│   ├── students.html
+│   ├── courses.html
+│   ├── reports.html
+│   └── settings.html
+│
+├── screenshots/
 ├── postman/
-├── .gitignore
 ├── package.json
-├── package-lock.json
-├── README.md
-└── server.js
+├── server.js
+└── README.md
 ```
+
+#### Location
+
+```text
+Project-2/
+```
+
+Project-specific documentation is available in:
+
+```text
+Project-2/README.md
+```
+
+---
 
 ## ⚙️ Installation
 
-### 1. Clone the repository
+Clone the repository:
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/bindushri709/student-management-backend.git
 ```
 
-### 2. Open the project
+Move into the repository:
 
 ```bash
 cd student-management-backend
 ```
 
-### 3. Install dependencies
+Each project has its own `package.json` and dependencies.
+
+For example:
 
 ```bash
+cd Project-2
 npm install
 ```
 
-### 4. Configure environment variables
-
-Create a `.env` file in the project root:
+Create a `.env` file inside the project and configure the MySQL connection:
 
 ```env
 DB_HOST=localhost
@@ -82,103 +169,84 @@ DB_PASSWORD=YOUR_MYSQL_PASSWORD
 DB_NAME=student_management
 ```
 
-> The `.env` file is not included in the GitHub repository for security reasons.
-
-### 5. Start the server
+Start the server:
 
 ```bash
 node server.js
 ```
 
-The server runs at:
+The application runs on:
 
 ```text
 http://localhost:5000
 ```
 
-## 📌 API Endpoints
-
-| Method | Endpoint                              | Description          |
-| ------ | ------------------------------------- | -------------------- |
-| GET    | `/api/students`                       | Get students         |
-| GET    | `/api/students/:id`                   | Get student by ID    |
-| POST   | `/api/students`                       | Create student       |
-| PUT    | `/api/students/:id`                   | Update student       |
-| DELETE | `/api/students/:id`                   | Delete student       |
-| GET    | `/api/students/search?name=Rahul`     | Search by name       |
-| GET    | `/api/students/search?department=ISE` | Search by department |
-
-## 🔎 Pagination & Sorting
-
-Example:
-
-```text
-GET /api/students?page=1&limit=5
-```
-
-Sorting example:
-
-```text
-GET /api/students?sort=name&order=asc
-```
-
-Pagination and sorting can also be combined:
-
-```text
-GET /api/students?page=1&limit=5&sort=name&order=asc
-```
-
-## ✅ Validation
-
-The API validates:
-
-* Name
-* Email format
-* Department
-* Semester (1–8)
-
-Invalid input returns a `400 Bad Request` response.
-
-Duplicate email addresses return:
-
-```text
-409 Conflict
-```
+---
 
 ## 🗄️ Database
 
-The project uses **MySQL** with a `students` table containing:
+The projects use **MySQL** for storing student and course information.
 
-* `id`
-* `name`
-* `email`
-* `department`
-* `semester`
+Student information includes fields such as:
+
+* ID
+* Name
+* Email
+* Department
+* Semester
+
+Project 2 additionally includes course-related information such as:
+
+* Course ID
+* Course Name
+* Course Code
+* Department
+* Credits
+
+---
 
 ## 🔐 Security
 
-Database credentials are stored using environment variables.
+Sensitive database credentials are stored using environment variables.
 
-The `.env` file and `node_modules` directory are excluded using `.gitignore`.
+The following files/directories are excluded from Git:
+
+```text
+node_modules/
+.env
+```
+
+---
+
+## 📸 API Testing
+
+API endpoints were tested using **Postman / Thunder Client**.
+
+Testing includes:
+
+* GET requests
+* POST requests
+* PUT requests
+* DELETE requests
+* Input validation
+* Search
+* Pagination
+* Sorting
+
+Screenshots are available inside the respective project folders.
+
+---
 
 ## 👩‍💻 Author
 
 **Bindu Shri N**
 
-Built as a Student Management Backend project for internship preparation.
-## 📸 API Testing Screenshots
+Student Management projects developed for **internship preparation and practical software development experience**.
 
-### GET - Get All Students
-![GET Students](screenshots/get-student.png)
+---
 
-### POST - Create Student
-![POST Student](screenshots/post-students.png)
+## 🔗 GitHub Repository
 
-### PUT - Update Student
-![PUT Student](screenshots/update-student.png)
+**Student Management Backend**
 
-### DELETE - Delete Student
-![DELETE Student](screenshots/delete-student.png)
-
-### Input Validation
-![Validation](screenshots/validation.png)
+https://github.com/bindushri709/student-management-backend

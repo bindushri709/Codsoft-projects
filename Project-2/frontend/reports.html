@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports - StudentHub</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                S
+            </div>
+
+            <div class="logo-text">
+
+                <h2>StudentHub</h2>
+
+                <span>Management System</span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="index.html" class="nav-item">
+
+                <span class="nav-icon">▣</span>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="students.html" class="nav-item">
+
+                <span class="nav-icon">👥</span>
+
+                <span>Students</span>
+
+            </a>
+
+
+            <a href="courses.html" class="nav-item">
+
+                <span class="nav-icon">📚</span>
+
+                <span>Courses</span>
+
+            </a>
+
+
+            <a href="reports.html" class="nav-item active">
+
+                <span class="nav-icon">📊</span>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <!-- FIXED SETTINGS NAVIGATION -->
+
+            <a href="settings.html" class="nav-item">
+
+                <span class="nav-icon">⚙</span>
+
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="user">
+
+                <div class="avatar">
+                    B
+                </div>
+
+                <div>
+
+                    <strong>Admin</strong>
+
+                    <small>Administrator</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="welcome">
+                    Student Reports
+                </p>
+
+                <h1>
+                    Reports
+                </h1>
+
+            </div>
+
+
+            <button class="notification" type="button">
+                🔔
+            </button>
+
+        </header>
+
+
+        <!-- ================= REPORT CARDS ================= -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    👥
+                </div>
+
+                <div class="stat-content">
+
+                    <p>Total Students</p>
+
+                    <h2 id="reportTotalStudents">
+                        0
+                    </h2>
+
+                    <span>Registered students</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    💻
+                </div>
+
+                <div class="stat-content">
+
+                    <p>CSE Students</p>
+
+                    <h2 id="reportCSE">
+                        0
+                    </h2>
+
+                    <span>Computer Science</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    🖥️
+                </div>
+
+                <div class="stat-content">
+
+                    <p>ISE Students</p>
+
+                    <h2 id="reportISE">
+                        0
+                    </h2>
+
+                    <span>Information Science</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    🎓
+                </div>
+
+                <div class="stat-content">
+
+                    <p>Other Students</p>
+
+                    <h2 id="reportOther">
+                        0
+                    </h2>
+
+                    <span>Other departments</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REPORT CONTENT ================= -->
+
+        <section class="content-grid">
+
+
+            <!-- DEPARTMENT REPORT -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Students by Department
+                        </h2>
+
+                        <p>
+                            Department-wise student statistics
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Department
+                                </th>
+
+                                <th>
+                                    Students
+                                </th>
+
+                                <th>
+                                    Percentage
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="departmentReport">
+
+                            <tr>
+
+                                <td colspan="3" class="empty">
+                                    Loading report...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEMESTER REPORT -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Students by Semester
+                        </h2>
+
+                        <p>
+                            Semester-wise student statistics
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Semester
+                                </th>
+
+                                <th>
+                                    Students
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="semesterReport">
+
+                            <tr>
+
+                                <td colspan="2" class="empty">
+                                    Loading report...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="js/reports.js"></script>
+<script src="js/global-settings.js"></script>
+
+</body>
+
+</html>

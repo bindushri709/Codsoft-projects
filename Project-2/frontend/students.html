@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Students - StudentHub</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- =================================================
+         SIDEBAR
+         ================================================= -->
+
+    <aside class="sidebar">
+
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                S
+            </div>
+
+            <div class="logo-text">
+
+                <h2>
+                    StudentHub
+                </h2>
+
+                <span>
+                    Management System
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+
+            <!-- Dashboard -->
+
+            <a
+                href="index.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ▣
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- Students -->
+
+            <a
+                href="students.html"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">
+                    👥
+                </span>
+
+                <span>
+                    Students
+                </span>
+
+            </a>
+
+
+            <!-- Courses -->
+
+            <a
+                href="courses.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    📚
+                </span>
+
+                <span>
+                    Courses
+                </span>
+
+            </a>
+
+
+            <!-- Reports -->
+
+            <a
+                href="reports.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    📊
+                </span>
+
+                <span>
+                    Reports
+                </span>
+
+            </a>
+
+
+            <!-- Settings -->
+
+            <a
+                href="settings.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ⚙
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR USER -->
+
+        <div class="sidebar-bottom">
+
+            <div class="user">
+
+                <div class="avatar">
+                    B
+                </div>
+
+                <div>
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Administrator
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =================================================
+         MAIN CONTENT
+         ================================================= -->
+
+    <main class="main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="welcome">
+                    Student Management
+                </p>
+
+                <h1>
+                    Students
+                </h1>
+
+            </div>
+
+
+            <button
+                class="notification"
+                type="button"
+            >
+                🔔
+            </button>
+
+        </header>
+
+
+
+        <!-- =================================================
+             STUDENT TOOLBAR
+             ================================================= -->
+
+        <section class="student-toolbar">
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <span>
+                    🔍
+                </span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search students..."
+                >
+
+            </div>
+
+
+            <!-- DEPARTMENT FILTER -->
+
+            <select id="departmentFilter">
+
+                <option value="">
+                    All Departments
+                </option>
+
+                <option value="ISE">
+                    ISE
+                </option>
+
+                <option value="CSE">
+                    CSE
+                </option>
+
+                <option value="ECE">
+                    ECE
+                </option>
+
+                <option value="EEE">
+                    EEE
+                </option>
+
+                <option value="ME">
+                    Mechanical
+                </option>
+
+            </select>
+
+
+            <!-- SEMESTER FILTER -->
+
+            <select id="semesterFilter">
+
+                <option value="">
+                    All Semesters
+                </option>
+
+                <option value="1">
+                    Semester 1
+                </option>
+
+                <option value="2">
+                    Semester 2
+                </option>
+
+                <option value="3">
+                    Semester 3
+                </option>
+
+                <option value="4">
+                    Semester 4
+                </option>
+
+                <option value="5">
+                    Semester 5
+                </option>
+
+                <option value="6">
+                    Semester 6
+                </option>
+
+                <option value="7">
+                    Semester 7
+                </option>
+
+                <option value="8">
+                    Semester 8
+                </option>
+
+            </select>
+
+
+            <!-- ADD STUDENT BUTTON -->
+
+            <button
+                class="add-student-btn"
+                id="addStudentBtn"
+                type="button"
+            >
+                + Add Student
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STUDENTS TABLE
+             ================================================= -->
+
+        <section class="panel student-panel">
+
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        All Students
+                    </h2>
+
+                    <p>
+                        Manage registered students
+                    </p>
+
+                </div>
+
+
+                <span
+                    id="studentCount"
+                    class="student-count"
+                >
+                    0 Students
+                </span>
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                ID
+                            </th>
+
+                            <th>
+                                Student
+                            </th>
+
+                            <th>
+                                Email
+                            </th>
+
+                            <th>
+                                Department
+                            </th>
+
+                            <th>
+                                Semester
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="studentsTableBody">
+
+                        <tr>
+
+                            <td
+                                colspan="6"
+                                class="empty"
+                            >
+                                Loading students...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- =================================================
+     ADD / EDIT STUDENT MODAL
+     ================================================= -->
+
+<div
+    class="modal"
+    id="studentModal"
+>
+
+
+    <div class="modal-content">
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2>
+                    Add Student
+                </h2>
+
+                <p>
+                    Enter student information
+                </p>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                id="closeModal"
+                type="button"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+
+        <!-- STUDENT FORM -->
+
+        <form id="studentForm">
+
+
+            <!-- STUDENT NAME -->
+
+            <div class="form-group">
+
+                <label>
+                    Student Name
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter student name"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="studentEmail"
+                    placeholder="student@gmail.com"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- DEPARTMENT + SEMESTER -->
+
+            <div class="form-row">
+
+
+                <!-- DEPARTMENT -->
+
+                <div class="form-group">
+
+                    <label>
+                        Department
+                    </label>
+
+                    <select
+                        id="studentDepartment"
+                        required
+                    >
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                        <option value="CSE">
+                            CSE
+                        </option>
+
+                        <option value="ISE">
+                            ISE
+                        </option>
+
+                        <option value="ECE">
+                            ECE
+                        </option>
+
+                        <option value="EEE">
+                            EEE
+                        </option>
+
+                        <option value="ME">
+                            Mechanical
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- SEMESTER -->
+
+                <div class="form-group">
+
+                    <label>
+                        Semester
+                    </label>
+
+                    <select
+                        id="studentSemester"
+                        required
+                    >
+
+                        <option value="">
+                            Select Semester
+                        </option>
+
+                        <option value="1">
+                            Semester 1
+                        </option>
+
+                        <option value="2">
+                            Semester 2
+                        </option>
+
+                        <option value="3">
+                            Semester 3
+                        </option>
+
+                        <option value="4">
+                            Semester 4
+                        </option>
+
+                        <option value="5">
+                            Semester 5
+                        </option>
+
+                        <option value="6">
+                            Semester 6
+                        </option>
+
+                        <option value="7">
+                            Semester 7
+                        </option>
+
+                        <option value="8">
+                            Semester 8
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MODAL BUTTONS -->
+
+            <div class="modal-actions">
+
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    id="cancelModal"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="add-student-btn"
+                >
+                    Save Student
+                </button>
+
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     STUDENT JAVASCRIPT
+     ================================================= -->
+
+<script src="js/students.js"></script>
+<script src="js/global-settings.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Settings - StudentHub</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="app">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                S
+            </div>
+
+            <div class="logo-text">
+
+                <h2>
+                    StudentHub
+                </h2>
+
+                <span>
+                    Management System
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+
+            <!-- Dashboard -->
+
+            <a
+                href="index.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ▣
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- Students -->
+
+            <a
+                href="students.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    👥
+                </span>
+
+                <span>
+                    Students
+                </span>
+
+            </a>
+
+
+            <!-- Courses -->
+
+            <a
+                href="courses.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    📚
+                </span>
+
+                <span>
+                    Courses
+                </span>
+
+            </a>
+
+
+            <!-- Reports -->
+
+            <a
+                href="reports.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    📊
+                </span>
+
+                <span>
+                    Reports
+                </span>
+
+            </a>
+
+
+            <!-- Settings -->
+
+            <a
+                href="settings.html"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">
+                    ⚙
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR USER -->
+
+        <div class="sidebar-bottom">
+
+            <div class="user">
+
+                <div class="avatar">
+                    B
+                </div>
+
+                <div>
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Administrator
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="welcome">
+                    System Settings
+                </p>
+
+                <h1>
+                    Settings
+                </h1>
+
+            </div>
+
+
+            <button
+                class="notification"
+                type="button"
+            >
+                🔔
+            </button>
+
+        </header>
+
+
+        <!-- ================= SETTINGS PANEL ================= -->
+
+        <section class="panel">
+
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        General Settings
+                    </h2>
+
+                    <p>
+                        Manage your StudentHub preferences
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="settings-content">
+
+
+                <!-- SYSTEM NAME -->
+
+                <div class="settings-row">
+
+                    <div>
+
+                        <strong>
+                            System Name
+                        </strong>
+
+                        <p>
+                            Name displayed throughout the application
+                        </p>
+
+                    </div>
+
+
+                    <input
+                        type="text"
+                        id="systemName"
+                        value="StudentHub"
+                    >
+
+                </div>
+
+
+                <!-- ADMIN NAME -->
+
+                <div class="settings-row">
+
+                    <div>
+
+                        <strong>
+                            Administrator Name
+                        </strong>
+
+                        <p>
+                            Name displayed in the sidebar
+                        </p>
+
+                    </div>
+
+
+                    <input
+                        type="text"
+                        id="adminName"
+                        value="Admin"
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="settings-row">
+
+                    <div>
+
+                        <strong>
+                            Administrator Email
+                        </strong>
+
+                        <p>
+                            Email address used for administration
+                        </p>
+
+                    </div>
+
+
+                    <input
+                        type="email"
+                        id="adminEmail"
+                        placeholder="admin@example.com"
+                    >
+
+                </div>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <div class="settings-row">
+
+                    <div>
+
+                        <strong>
+                            Notifications
+                        </strong>
+
+                        <p>
+                            Enable application notifications
+                        </p>
+
+                    </div>
+
+
+                    <label class="toggle">
+
+                        <input
+                            type="checkbox"
+                            id="notificationToggle"
+                            checked
+                        >
+
+                        <span class="toggle-slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- SAVE BUTTON -->
+
+                <div class="settings-actions">
+
+                    <button
+                        type="button"
+                        class="add-student-btn"
+                        id="saveSettings"
+                    >
+                        Save Settings
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT PANEL ================= -->
+
+        <section
+            class="panel settings-about"
+        >
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        About StudentHub
+                    </h2>
+
+                    <p>
+                        Student Management System
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <p>
+                    StudentHub helps administrators manage
+                    students, courses and academic reports
+                    in one place.
+                </p>
+
+                <span>
+                    Version 1.0
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="js/settings.js"></script>
+<script src="js/global-settings.js"></script>
+
+</body>
+
+</html>
