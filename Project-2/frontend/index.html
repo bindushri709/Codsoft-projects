@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - StudentHub</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">S</div>
+
+            <div class="logo-text">
+                <h2>StudentHub</h2>
+                <span>Management System</span>
+            </div>
+        </div>
+
+        <nav class="navigation">
+
+            <a href="index.html" class="nav-item active">
+                <span class="nav-icon">▣</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="students.html" class="nav-item">
+                <span class="nav-icon">👥</span>
+                <span>Students</span>
+            </a>
+
+            <a href="courses.html" class="nav-item">
+                <span class="nav-icon">📚</span>
+                <span>Courses</span>
+            </a>
+
+            <a href="reports.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+                <span>Reports</span>
+            </a>
+
+            <!-- FIXED: Settings navigation -->
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="user">
+
+                <div class="avatar">B</div>
+
+                <div>
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+                <p class="welcome">Welcome back, Admin</p>
+                <h1>Dashboard</h1>
+            </div>
+
+            <button class="notification" type="button">
+                🔔
+            </button>
+
+        </header>
+
+
+        <!-- STATISTICS -->
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    👥
+                </div>
+
+                <div class="stat-content">
+                    <p>Total Students</p>
+                    <h2 id="totalStudents">0</h2>
+                    <span>Registered students</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    💻
+                </div>
+
+                <div class="stat-content">
+                    <p>ISE Students</p>
+                    <h2 id="iseStudents">0</h2>
+                    <span>Information Science</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    🖥️
+                </div>
+
+                <div class="stat-content">
+                    <p>CSE Students</p>
+                    <h2 id="cseStudents">0</h2>
+                    <span>Computer Science</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    🎓
+                </div>
+
+                <div class="stat-content">
+                    <p>Other Students</p>
+                    <h2 id="otherStudents">0</h2>
+                    <span>Other departments</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTENT -->
+        <section class="content-grid">
+
+            <!-- RECENT STUDENTS -->
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Recent Students</h2>
+                        <p>Latest registered students</p>
+                    </div>
+
+                    <a href="students.html" class="view-button">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Student</th>
+                                <th>Email</th>
+                                <th>Department</th>
+                                <th>Semester</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="recentStudents">
+
+                            <tr>
+                                <td colspan="5" class="empty">
+                                    Loading students...
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK ACTIONS -->
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Quick Actions</h2>
+                        <p>Manage your system</p>
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <a href="students.html" class="action-card">
+
+                        <span class="action-icon purple">
+                            ➕
+                        </span>
+
+                        <div>
+                            <strong>Add Student</strong>
+                            <small>Register a new student</small>
+                        </div>
+
+                    </a>
+
+
+                    <a href="students.html" class="action-card">
+
+                        <span class="action-icon blue">
+                            👥
+                        </span>
+
+                        <div>
+                            <strong>View Students</strong>
+                            <small>Manage student records</small>
+                        </div>
+
+                    </a>
+
+
+                    <a href="courses.html" class="action-card">
+
+                        <span class="action-icon green">
+                            📚
+                        </span>
+
+                        <div>
+                            <strong>Manage Courses</strong>
+                            <small>Manage available courses</small>
+                        </div>
+
+                    </a>
+
+
+                    <a href="reports.html" class="action-card">
+
+                        <span class="action-icon orange">
+                            📊
+                        </span>
+
+                        <div>
+                            <strong>View Reports</strong>
+                            <small>Student statistics</small>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
