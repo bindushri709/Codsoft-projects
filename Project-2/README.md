@@ -1,184 +1,265 @@
-# Student Management Backend
+````markdown
+# Student Management System - Project 2
 
-A RESTful backend application for managing student records using **Node.js, Express.js, and MySQL**.
+A full-stack Student Management System developed as part of the CodSoft Internship Projects.
 
-## 🚀 Features
+The application provides a web-based interface for managing students and courses, viewing reports, and calculating student academic performance.
 
-* Create a new student
-* Get all students
-* Get a student by ID
-* Update student details
-* Delete a student
-* Input validation
-* Duplicate email handling
-* Search students by name or department
-* Pagination
-* Sorting
-* Environment variable configuration
-* Proper HTTP status codes and error handling
+## Features
 
-## 🛠️ Technologies Used
+### Student Management
 
-* Node.js
-* Express.js
-* MySQL
-* mysql2
-* express-validator
-* dotenv
-* Thunder Client / Postman
-* Git & GitHub
+- Add new students
+- View all students
+- Update student information
+- Delete students
+- Student validation
+- Department and semester information
+- Search and manage student records
 
-## 📁 Project Structure
+### Course Management
+
+- Add courses
+- View courses
+- Update course information
+- Delete courses
+- Manage course details through the dashboard
+
+### Dashboard
+
+- Student statistics
+- Course information
+- Quick access to major sections
+- Clean and responsive dashboard interface
+
+### Reports
+
+- Total student count
+- CSE student count
+- ISE student count
+- Other department student count
+- Department-wise student report
+- Percentage of students by department
+- Semester-wise student report
+
+### Student Grade Calculator
+
+The Reports section also includes an academic performance calculator.
+
+Users can enter:
+
+- Student name
+- Roll number
+- Mathematics marks
+- Physics marks
+- Computer Science marks
+- English marks
+- Programming marks
+
+The system calculates:
+
+- Total marks out of 500
+- Average percentage
+- Grade
+- Pass/Fail result
+
+### Settings
+
+- Application settings
+- Global settings support
+- User interface configuration
+
+## Technologies Used
+
+### Backend
+
+- Node.js
+- Express.js
+- MySQL
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+
+### Development and Testing
+
+- Git
+- GitHub
+- Postman
+- REST API
+
+## Project Structure
 
 ```text
-Student-management/
+Project-2/
 │
 ├── config/
 │   └── db.js
 │
 ├── controllers/
+│   ├── courseController.js
 │   ├── studentController.js
 │   └── studentValidation.js
 │
 ├── routes/
+│   ├── courseRoutes.js
 │   └── studentRoutes.js
 │
+├── frontend/
+│   ├── css/
+│   │   └── style.css
+│   │
+│   ├── js/
+│   │   ├── app.js
+│   │   ├── courses.js
+│   │   ├── global-settings.js
+│   │   ├── reports.js
+│   │   ├── settings.js
+│   │   └── students.js
+│   │
+│   ├── courses.html
+│   ├── index.html
+│   ├── reports.html
+│   ├── settings.html
+│   └── students.html
+│
 ├── postman/
+│
+├── screenshots/
+│
+├── .env
 ├── .gitignore
 ├── package.json
 ├── package-lock.json
-├── README.md
 └── server.js
+````
+
+## API Endpoints
+
+### Students
+
+```text
+GET    /api/students
+POST   /api/students
+PUT    /api/students/:id
+DELETE /api/students/:id
 ```
 
-## ⚙️ Installation
+### Courses
 
-### 1. Clone the repository
+```text
+GET    /api/courses
+POST   /api/courses
+PUT    /api/courses/:id
+DELETE /api/courses/:id
+```
+
+## Database
+
+The project uses **MySQL** as the database.
+
+The database connection is configured in:
+
+```text
+config/db.js
+```
+
+Database credentials should be stored in the `.env` file.
+
+Example:
+
+```env
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=student_management
+PORT=5000
+```
+
+Do not commit the `.env` file to GitHub.
+
+## Installation
+
+Clone the repository:
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/bindushri709/Codsoft-projects.git
 ```
 
-### 2. Open the project
+Navigate to Project-2:
 
 ```bash
-cd student-management-backend
+cd Codsoft-projects/Project-2
 ```
 
-### 3. Install dependencies
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-### 4. Configure environment variables
+Create a `.env` file and configure your MySQL database.
 
-Create a `.env` file in the project root:
-
-```env
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=YOUR_MYSQL_PASSWORD
-DB_NAME=student_management
-```
-
-> The `.env` file is not included in the GitHub repository for security reasons.
-
-### 5. Start the server
+Start the server:
 
 ```bash
 node server.js
 ```
 
-The server runs at:
+The application runs on:
 
 ```text
 http://localhost:5000
 ```
 
-## 📌 API Endpoints
+## Testing with Postman
 
-| Method | Endpoint                              | Description          |
-| ------ | ------------------------------------- | -------------------- |
-| GET    | `/api/students`                       | Get students         |
-| GET    | `/api/students/:id`                   | Get student by ID    |
-| POST   | `/api/students`                       | Create student       |
-| PUT    | `/api/students/:id`                   | Update student       |
-| DELETE | `/api/students/:id`                   | Delete student       |
-| GET    | `/api/students/search?name=Rahul`     | Search by name       |
-| GET    | `/api/students/search?department=ISE` | Search by department |
+The APIs can be tested using Postman.
 
-## 🔎 Pagination & Sorting
+The project includes Postman resources and screenshots demonstrating API operations such as:
 
-Example:
+* Get students
+* Create student
+* Update student
+* Delete student
+* Validation
 
-```text
-GET /api/students?page=1&limit=5
-```
+## Screenshots
 
-Sorting example:
+Screenshots of API testing and application functionality are available in:
 
 ```text
-GET /api/students?sort=name&order=asc
+screenshots/
 ```
 
-Pagination and sorting can also be combined:
+## Project Highlights
 
-```text
-GET /api/students?page=1&limit=5&sort=name&order=asc
+This project demonstrates practical experience with:
+
+* REST API development
+* CRUD operations
+* Express.js routing
+* MySQL database integration
+* Frontend and backend integration
+* Form validation
+* JavaScript DOM manipulation
+* Student and course management
+* Report generation
+* Academic performance calculation
+* API testing with Postman
+* Git and GitHub version control
+
+## Author
+
+**Bindu Shri**
+
+CodSoft Internship Projects
+
+GitHub:
+
+https://github.com/bindushri709/Codsoft-projects
+
 ```
-
-## ✅ Validation
-
-The API validates:
-
-* Name
-* Email format
-* Department
-* Semester (1–8)
-
-Invalid input returns a `400 Bad Request` response.
-
-Duplicate email addresses return:
-
-```text
-409 Conflict
 ```
-
-## 🗄️ Database
-
-The project uses **MySQL** with a `students` table containing:
-
-* `id`
-* `name`
-* `email`
-* `department`
-* `semester`
-
-## 🔐 Security
-
-Database credentials are stored using environment variables.
-
-The `.env` file and `node_modules` directory are excluded using `.gitignore`.
-
-## 👩‍💻 Author
-
-**Bindu Shri N**
-
-Built as a Student Management Backend project for internship preparation.
-## 📸 API Testing Screenshots
-
-### GET - Get All Students
-![GET Students](screenshots/get-student.png)
-
-### POST - Create Student
-![POST Student](screenshots/post-students.png)
-
-### PUT - Update Student
-![PUT Student](screenshots/update-student.png)
-
-### DELETE - Delete Student
-![DELETE Student](screenshots/delete-student.png)
-
-### Input Validation
-![Validation](screenshots/validation.png)

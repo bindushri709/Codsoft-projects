@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,15 +16,12 @@
 
 <div class="app">
 
-    <!-- ================= SIDEBAR ================= -->
+    <!-- SIDEBAR -->
 
     <aside class="sidebar">
 
         <div class="logo">
-
-            <div class="logo-icon">
-                S
-            </div>
+            <div class="logo-icon">S</div>
 
             <div class="logo-text">
 
@@ -74,8 +72,7 @@
             </a>
 
 
-            <!-- FIXED SETTINGS NAVIGATION -->
-
+            
             <a href="settings.html" class="nav-item">
 
                 <span class="nav-icon">⚙</span>
@@ -91,9 +88,7 @@
 
             <div class="user">
 
-                <div class="avatar">
-                    B
-                </div>
+                <div class="avatar">B</div>
 
                 <div>
 
@@ -110,7 +105,7 @@
     </aside>
 
 
-    <!-- ================= MAIN ================= -->
+    <!-- MAIN CONTENT -->
 
     <main class="main">
 
@@ -119,15 +114,8 @@
         <header class="topbar">
 
             <div>
-
-                <p class="welcome">
-                    Student Reports
-                </p>
-
-                <h1>
-                    Reports
-                </h1>
-
+                <p class="welcome">Student Reports</p>
+                <h1>Reports</h1>
             </div>
 
 
@@ -138,24 +126,18 @@
         </header>
 
 
-        <!-- ================= REPORT CARDS ================= -->
+        <!-- STATISTICS -->
 
         <section class="stats">
 
             <div class="stat-card">
 
-                <div class="stat-icon purple">
-                    👥
-                </div>
+                <div class="stat-icon purple">👥</div>
 
                 <div class="stat-content">
 
                     <p>Total Students</p>
-
-                    <h2 id="reportTotalStudents">
-                        0
-                    </h2>
-
+                    <h2 id="reportTotalStudents">0</h2>
                     <span>Registered students</span>
 
                 </div>
@@ -165,18 +147,12 @@
 
             <div class="stat-card">
 
-                <div class="stat-icon blue">
-                    💻
-                </div>
+                <div class="stat-icon blue">💻</div>
 
                 <div class="stat-content">
 
                     <p>CSE Students</p>
-
-                    <h2 id="reportCSE">
-                        0
-                    </h2>
-
+                    <h2 id="reportCSE">0</h2>
                     <span>Computer Science</span>
 
                 </div>
@@ -186,18 +162,12 @@
 
             <div class="stat-card">
 
-                <div class="stat-icon green">
-                    🖥️
-                </div>
+                <div class="stat-icon green">🖥️</div>
 
                 <div class="stat-content">
 
                     <p>ISE Students</p>
-
-                    <h2 id="reportISE">
-                        0
-                    </h2>
-
+                    <h2 id="reportISE">0</h2>
                     <span>Information Science</span>
 
                 </div>
@@ -207,18 +177,12 @@
 
             <div class="stat-card">
 
-                <div class="stat-icon orange">
-                    🎓
-                </div>
+                <div class="stat-icon orange">🎓</div>
 
                 <div class="stat-content">
 
                     <p>Other Students</p>
-
-                    <h2 id="reportOther">
-                        0
-                    </h2>
-
+                    <h2 id="reportOther">0</h2>
                     <span>Other departments</span>
 
                 </div>
@@ -228,7 +192,7 @@
         </section>
 
 
-        <!-- ================= REPORT CONTENT ================= -->
+        <!-- DEPARTMENT AND SEMESTER REPORTS -->
 
         <section class="content-grid">
 
@@ -240,15 +204,8 @@
                 <div class="panel-header">
 
                     <div>
-
-                        <h2>
-                            Students by Department
-                        </h2>
-
-                        <p>
-                            Department-wise student statistics
-                        </p>
-
+                        <h2>Students by Department</h2>
+                        <p>Department-wise student statistics</p>
                     </div>
 
                 </div>
@@ -261,19 +218,9 @@
                         <thead>
 
                             <tr>
-
-                                <th>
-                                    Department
-                                </th>
-
-                                <th>
-                                    Students
-                                </th>
-
-                                <th>
-                                    Percentage
-                                </th>
-
+                                <th>Department</th>
+                                <th>Students</th>
+                                <th>Percentage</th>
                             </tr>
 
                         </thead>
@@ -305,15 +252,8 @@
                 <div class="panel-header">
 
                     <div>
-
-                        <h2>
-                            Students by Semester
-                        </h2>
-
-                        <p>
-                            Semester-wise student statistics
-                        </p>
-
+                        <h2>Students by Semester</h2>
+                        <p>Semester-wise student statistics</p>
                     </div>
 
                 </div>
@@ -326,15 +266,8 @@
                         <thead>
 
                             <tr>
-
-                                <th>
-                                    Semester
-                                </th>
-
-                                <th>
-                                    Students
-                                </th>
-
+                                <th>Semester</th>
+                                <th>Students</th>
                             </tr>
 
                         </thead>
@@ -358,6 +291,191 @@
 
             </div>
 
+        </section>
+
+
+        <!-- STUDENT GRADE CALCULATOR -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <h2>Student Grade Calculator</h2>
+                    <p>Calculate total marks, average, grade and result</p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="reportStudentName">
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="reportStudentName"
+                        placeholder="Enter student name"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="reportRollNumber">
+                        Roll Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="reportRollNumber"
+                        placeholder="Enter roll number"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="reportMaths">
+                        Mathematics
+                    </label>
+
+                    <input
+                        type="number"
+                        id="reportMaths"
+                        min="0"
+                        max="100"
+                        placeholder="0 - 100"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="reportPhysics">
+                        Physics
+                    </label>
+
+                    <input
+                        type="number"
+                        id="reportPhysics"
+                        min="0"
+                        max="100"
+                        placeholder="0 - 100"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="reportComputer">
+                        Computer Science
+                    </label>
+
+                    <input
+                        type="number"
+                        id="reportComputer"
+                        min="0"
+                        max="100"
+                        placeholder="0 - 100"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="reportEnglish">
+                        English
+                    </label>
+
+                    <input
+                        type="number"
+                        id="reportEnglish"
+                        min="0"
+                        max="100"
+                        placeholder="0 - 100"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="reportProgramming">
+                        Programming
+                    </label>
+
+                    <input
+                        type="number"
+                        id="reportProgramming"
+                        min="0"
+                        max="100"
+                        placeholder="0 - 100"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="calculateReportButton"
+            >
+                Calculate Report
+            </button>
+
+
+            <!-- CALCULATED RESULT -->
+
+            <div
+                id="studentReportResult"
+                style="display: none; margin-top: 25px;"
+            >
+
+                <h3>Student Report</h3>
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="resultStudentName"></span>
+                </p>
+
+                <p>
+                    <strong>Roll Number:</strong>
+                    <span id="resultRollNumber"></span>
+                </p>
+
+                <p>
+                    <strong>Total Marks:</strong>
+                    <span id="resultTotalMarks"></span>
+                </p>
+
+                <p>
+                    <strong>Average:</strong>
+                    <span id="resultAverageMarks"></span>
+                </p>
+
+                <p>
+                    <strong>Grade:</strong>
+                    <span id="resultGrade"></span>
+                </p>
+
+                <p>
+                    <strong>Result:</strong>
+                    <span id="resultStatus"></span>
+                </p>
+
+            </div>
 
         </section>
 
@@ -372,3 +490,4 @@
 </body>
 
 </html>
+```
