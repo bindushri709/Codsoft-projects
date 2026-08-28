@@ -250,3 +250,97 @@ Student Management projects developed for **internship preparation and practical
 **Student Management Backend**
 
 https://github.com/bindushri709/student-management-backend
+---
+
+## 🚀 Project 3 – Hospital Appointment Management System
+
+### 🏥 Project Overview
+
+A full-stack **Hospital Appointment Management System** developed using **React.js, Node.js, Express.js, and MongoDB**.
+
+The application helps manage patients, doctors, departments, specializations, doctor availability, and appointments.
+
+### ✨ Key Features
+
+#### 👤 Patient Management
+- Patient registration and login
+- Patient profile management
+- Search available doctors by date and time
+- View doctor availability
+- Book appointments
+- View appointments
+- Cancel appointments
+
+#### 👨‍⚕️ Doctor Management
+- Doctor registration and login
+- Doctor profile management
+- Add and manage availability slots
+- View patient appointments
+- Confirm appointments
+- Complete appointments
+
+#### 📅 Availability Management
+- Create doctor availability slots
+- Select date, start time, and end time
+- Automatically determine the day of the week
+- Search doctors based on availability
+- Prevent booking unavailable slots
+
+#### 📋 Appointment Management
+- Patient appointment booking
+- Doctor appointment management
+- Appointment confirmation
+- Appointment cancellation
+- Appointment completion
+
+### 🔐 Authentication & Security
+
+- JWT-based authentication
+- Password hashing using bcrypt
+- Role-based authorization
+- Protected API routes
+- Input validation
+- Environment variables for sensitive information
+
+### 🛠️ Technologies Used
+
+**Frontend:** React.js, Vite, JavaScript, HTML, CSS
+
+**Backend:** Node.js, Express.js, MongoDB, Mongoose
+
+**Authentication:** JWT, bcryptjs
+
+**Tools:** Postman, Visual Studio Code, Git, GitHub
+
+### 🔄 Appointment Workflow
+
+```text
+Doctor Creates Availability
+          ↓
+Patient Searches Doctor
+          ↓
+Patient Books Appointment
+          ↓
+Doctor Confirms Appointment
+          ↓
+Appointment Confirmed
+          ↓
+Appointment Completed
+📚 Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+Full-stack web development
+RESTful API development
+MongoDB and Mongoose
+JWT authentication
+Role-based authorization
+CRUD operations
+API validation and error handling
+React.js frontend development
+Frontend and backend integration
+Git and GitHub
+🔗 Project Links
+
+GitHub Repository:
+https://github.com/bindushri709/Codsoft-projects/tree/main/Project-3/Hospital_Appointment_API
