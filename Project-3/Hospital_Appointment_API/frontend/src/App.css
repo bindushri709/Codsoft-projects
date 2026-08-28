@@ -1,0 +1,748 @@
+/* =========================================
+   GLOBAL
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef7fb;
+  color: #222;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* =========================================
+   LOGIN / REGISTER
+   ========================================= */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: #eef7fb;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.header h1 {
+  color: #176f8c;
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #666;
+  font-size: 16px;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 27px;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-card label {
+  font-weight: bold;
+  margin-bottom: 7px;
+  margin-top: 12px;
+}
+
+.auth-card input,
+.auth-card select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.auth-card input:focus,
+.auth-card select:focus {
+  border-color: #176f8c;
+}
+
+.auth-card form > button {
+  margin-top: 22px;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #176f8c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-card form > button:hover {
+  background: #125b73;
+}
+
+.switch-text {
+  text-align: center;
+  margin-top: 22px;
+  color: #555;
+}
+
+.link-button {
+  border: none;
+  background: transparent;
+  color: #176f8c;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.message {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #edf8f2;
+  color: #176b48;
+  text-align: center;
+}
+
+/* =========================================
+   DASHBOARD
+   ========================================= */
+
+.dashboard {
+  min-height: 100vh;
+  background: #eef7fb;
+}
+
+.dashboard-header {
+  background: white;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-header h1 {
+  color: #176f8c;
+  font-size: 30px;
+}
+
+.dashboard-header p {
+  color: #666;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.logout-button {
+  border: none;
+  background: #d9534f;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #c9302c;
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+.welcome-card,
+.dashboard-section {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.welcome-card h2 {
+  color: #176f8c;
+  margin-bottom: 12px;
+}
+
+.welcome-card p {
+  font-size: 17px;
+}
+
+.dashboard-message {
+  background: #edf8f2;
+  color: #176b48;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* =========================================
+   SECTION HEADER
+   ========================================= */
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.section-header h2 {
+  color: #176f8c;
+}
+
+.section-header button {
+  border: none;
+  background: #176f8c;
+  color: white;
+  padding: 11px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.section-header button:hover {
+  background: #125b73;
+}
+
+.section-header button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   DOCTORS
+   ========================================= */
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.doctor-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+}
+
+.doctor-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.doctor-card h3 {
+  color: #176f8c;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.doctor-card p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.doctor-card strong {
+  font-weight: bold;
+}
+
+.book-button {
+  width: 100%;
+  border: none;
+  background: #176f8c;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.book-button:hover {
+  background: #125b73;
+}
+
+.book-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   APPOINTMENTS
+   ========================================= */
+
+.appointment-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.appointment-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background: white;
+}
+
+.appointment-card h3 {
+  color: #176f8c;
+  margin-bottom: 15px;
+}
+
+.appointment-card p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.confirmed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.completed {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.status.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.cancel-button {
+  width: 100%;
+  border: none;
+  background: #d9534f;
+  color: white;
+  padding: 11px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.cancel-button:hover {
+  background: #c9302c;
+}
+
+.cancel-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   AVAILABILITY MODAL
+   ========================================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  width: 100%;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.booking-modal {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.modal-header h2 {
+  color: #176f8c;
+  margin-bottom: 5px;
+}
+
+.modal-header p {
+  color: #666;
+}
+
+.close-button {
+  border: none;
+  background: #eee;
+  color: #333;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.close-button:hover {
+  background: #ddd;
+}
+
+/* =========================================
+   AVAILABILITY SLOTS
+   ========================================= */
+
+.availability-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.availability-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.availability-card h3 {
+  color: #176f8c;
+  margin-bottom: 8px;
+}
+
+.availability-card p {
+  margin-top: 5px;
+}
+
+.availability-card .book-button {
+  width: auto;
+  min-width: 180px;
+  margin-top: 0;
+}
+
+.loading-box,
+.empty-box {
+  padding: 30px;
+  text-align: center;
+  color: #666;
+}
+
+/* =========================================
+   BOOKING FORM
+   ========================================= */
+
+.booking-details {
+  background: #f5f9fb;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.booking-details p {
+  margin-bottom: 9px;
+}
+
+.booking-details p:last-child {
+  margin-bottom: 0;
+}
+
+.booking-modal label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.booking-modal textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  font-size: 15px;
+  outline: none;
+}
+
+.booking-modal textarea:focus {
+  border-color: #176f8c;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.booking-actions button {
+  flex: 1;
+}
+
+.secondary-button {
+  border: none;
+  background: #777;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.secondary-button:hover {
+  background: #666;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 800px) {
+  .doctor-grid,
+  .appointment-list {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
+    padding: 20px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .dashboard-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 15px;
+  }
+
+  .auth-card {
+    padding: 25px;
+  }
+
+  .header h1 {
+    font-size: 25px;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .section-header button {
+    width: 100%;
+  }
+
+  .availability-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .availability-card .book-button {
+    width: 100%;
+  }
+
+  .booking-actions {
+    flex-direction: column;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .logout-button {
+    width: 100%;
+  }
+}
+/* =========================================
+   DOCTOR DASHBOARD
+   ========================================= */
+
+.doctor-dashboard-section {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.doctor-dashboard-section h2 {
+  color: #176f8c;
+  margin-bottom: 20px;
+}
+
+.doctor-appointment-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.doctor-appointment-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background: white;
+}
+
+.doctor-appointment-card h3 {
+  color: #176f8c;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.doctor-appointment-card p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.doctor-action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.doctor-action-buttons button {
+  flex: 1;
+  border: none;
+  padding: 11px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.confirm-button {
+  background: #28a745;
+}
+
+.confirm-button:hover {
+  background: #218838;
+}
+
+.complete-button {
+  background: #176f8c;
+}
+
+.complete-button:hover {
+  background: #125b73;
+}
+
+.doctor-cancel-button {
+  background: #d9534f;
+}
+
+.doctor-cancel-button:hover {
+  background: #c9302c;
+}
+
+.doctor-action-buttons button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.doctor-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.doctor-filter button {
+  border: 1px solid #176f8c;
+  background: white;
+  color: #176f8c;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.doctor-filter button:hover {
+  background: #176f8c;
+  color: white;
+}
+
+.doctor-filter button.active {
+  background: #176f8c;
+  color: white;
+}
+
+/* Doctor dashboard responsive */
+
+@media (max-width: 800px) {
+  .doctor-appointment-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .doctor-action-buttons {
+    flex-direction: column;
+  }
+
+  .doctor-filter {
+    flex-direction: column;
+  }
+
+  .doctor-filter button {
+    width: 100%;
+  }
+}
